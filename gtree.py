@@ -1,6 +1,20 @@
 #!/usr/bin/env python3
 
-# Licensed under the GNU General Public License, Version 2.0.
+# GTREE - a simple family tree program.
+# Copyright (C) 2024  Solomon Wood
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, see <https://www.gnu.org/licenses/>.
 
 import glob
 import sys
@@ -22,7 +36,7 @@ if platform.system() == "Windows":
 		import colorama # type: ignore
 		colorama.just_fix_windows_console()
 	except ImportError:
-		print("Could not get 'colorama' module. This is required on Windows.")
+		print("Could not load 'colorama' module. This is required on Windows.")
 		print("To install, run")
 		print("\tpip install colorama")
 		exit(-1)
@@ -50,12 +64,14 @@ FILENAME		: str					= None
 # HTML is used with the :inline option.
 
 WELCOMETEXT		= """
-Welcome to GTREE Version 1.30.
+Welcome to GTREE version 1.30.
 """
 
 COPYRIGHT		= """
-Copyright: Solomon Wood (C) 2024
-All rights reserved.
+GTREE version 1.30, Copyright (C) 2024  Solomon Wood
+GTREE comes with ABSOLUTELY NO WARRANTY. This is free
+software, and you are welcome to redistribute it under
+certain conditions.
 """
 
 STANDALONEHTML			= """
